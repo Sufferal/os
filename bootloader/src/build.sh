@@ -21,13 +21,13 @@ fi
 echo "Step 1: Compilation completed."
 
 # Step 2: Copy the .com file to a .flp file
-nasm -f bin -o "init_bootloader.com" "init_bootloader.asm"
+nasm -f bin -o "sim_boot.com" "sim_boot.asm"
 if [ $? -ne 0 ]; then
   echo "Compilation failed. Check your bootloader code."
   exit 1 
 fi
 echo "Step 2: Compilation of boatloader completed."
-cat "init_bootloader.com" "$com_file" > "$flp_file"
+cat "sim_boot.com" "$com_file" > "$flp_file"
 
 
 # Step 3: Resize the .flp file to 1.44MB

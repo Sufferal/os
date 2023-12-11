@@ -5,12 +5,12 @@ int 13h
 
 mov ax, 0000h
 mov es, ax
-mov bx, 1000h
+mov bx, 1000h 
 
 mov ah, 02h
-mov al, 3  
+mov al, 2 
 mov ch, 0
-mov cl, 2
+mov cl, 2 
 mov dh, 0
 mov dl, 0
 int 13h
